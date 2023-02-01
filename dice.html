@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Roll</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .container {
+            width: 70%;
+            margin: auto;
+            text-align: center;
+        }
+
+        body {
+            background-color: #0a3d62;
+        }
+
+        .dice {
+            text-align: center;
+            display: inline-block;
+
+        }
+
+        img {
+            width: 70%;
+        }
+
+        p {
+            margin: 30px;
+            text-shadow: 2px 2px yellow;
+            font-size: 2.5rem;
+            color: #00b894;
+            font-family: 'Acme', sans-serif;
+            font-weight: 400;
+
+        }
+
+        h1 {
+
+            margin: 30px;
+            text-shadow: 5px 0 whitesmoke;
+            font-size: 6rem;
+            color: #f6b93b;
+        }
+
+        button {
+            padding: 10px;
+            background-color: rgb(2, 65, 12);
+            margin-top: auto;
+            color: rgb(20, 19, 19);
+            border: none;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Dice Roll</h1>
+        <div class="dice">
+
+            <img src="https://media.istockphoto.com/id/173682323/photo/says.jpg?s=612x612&w=0&k=20&c=7jnXQrYzUWNTnLhjPgimxHIbjsaHvZmAMALGVzYNARQ="
+                alt="dice1" id="check1" onclick="diceroll()">
+        </div>
+    </div>
+    <script>
+        diceroll = () => {
+
+            document.querySelector('h1').innerHTML = Math.floor(Math.random() * 6) + 1;
+        }       
+    </script>
+</body>
+
+</html>

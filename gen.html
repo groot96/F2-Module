@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Text</title>
+    <style>
+        .contai{
+            background-color: aqua;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+        }
+        p{
+            color: brown;
+
+        }
+    </style>
+</head>
+<body>
+   <div class="contai">
+   <h1><p id="ra"></p></h1>
+   </div>
+
+    <script>
+        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+var down = document.getElementById('ra');
+
+function generateString(length) {
+
+        let result = ' ';
+        const charactersLength = characters.length;
+        for (let i = 0; i < length; i++) {
+            result += characters.charAt(Math.floor(Math.random() * charactersLength));
+        }
+
+        return result;
+    }
+    down.innerHTML = (generateString(12));
+
+    </script>
+</body>
+</html>
